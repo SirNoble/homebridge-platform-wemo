@@ -126,7 +126,7 @@ function WemoPlatform(log, config, api) {
                         self.addLinkAccessory(device, enddevices[i]);
                     }
                     else {
-                        self.accessories[uuid] = new WemoLinkAccessory(self.log, accessory, device, enddevices[i]);
+                        self.accessories[uuid] = new WemoLinkAccessory(self.log, accessory.accessory || accessory, device, enddevices[i]);
                     }
                 }
             });
